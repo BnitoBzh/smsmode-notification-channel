@@ -4,9 +4,9 @@ namespace BnitoBzh\Notifications\Tests\Unit\Messages;
 
 use BnitoBzh\Notifications\Messages\SmsmodeMessage;
 use DateTimeImmutable;
+use Illuminate\Support\Str;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Illuminate\Support\Str;
 
 class SmsmodeMessageTest extends TestCase
 {
