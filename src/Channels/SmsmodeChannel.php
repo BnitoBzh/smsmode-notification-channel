@@ -30,9 +30,7 @@ class SmsmodeChannel
      *
      * @param HttpClientInterface $client
      * @param string              $sender
-     * @param string|null         $endpoint
-     *
-     * @return void
+     * @param string              $endpoint
      */
     public function __construct(HttpClientInterface $client, string $sender, string $endpoint)
     {
@@ -47,7 +45,7 @@ class SmsmodeChannel
      * @param mixed        $notifiable
      * @param Notification $notification
      */
-    public function send(object $notifiable, Notification $notification)
+    public function send(object $notifiable, Notification $notification): void
     {
         $to = $notifiable->routeNotificationFor('smsmode', $notification)
             ?? $notifiable->routeNotificationFor(SmsmodeChannel::class, $notification);
